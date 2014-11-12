@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/EYEServiceWebRole" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EYEServiceWebRole" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52635/EYEService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressId_fk" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="HealthCareProviders" nillable="true" type="tns:ArrayOfHealthCareProvider">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Families" nillable="true" type="tns:ArrayOfFamily">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="ArrayOfHealthCareProvider">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HealthCareProvider" nillable="true" type="tns:HealthCareProvider" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHealthCareProvider" nillable="true" type="tns:ArrayOfHealthCareProvider" />
+  <xs:complexType name="HealthCareProvider">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="HealthCareProviderId" type="xs:int" />
+      <xs:element minOccurs="0" name="PracticeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleInPractice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClinicName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId_fk" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Appointments" nillable="true" type="tns:ArrayOfAppointment">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Qualification_Providers" nillable="true" type="tns:ArrayOfQualification_Provider">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HealthCareProvider" nillable="true" type="tns:HealthCareProvider" />
+  <xs:complexType name="ArrayOfAppointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Appointment" nillable="true" type="tns:Appointment" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAppointment" nillable="true" type="tns:ArrayOfAppointment" />
+  <xs:complexType name="Appointment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppointmentId" type="xs:int" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="ser:duration" />
+      <xs:element minOccurs="0" name="Date" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Reason" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsNewRequestFromParent" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsNewRequestFromProvider" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PatientId_fk" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProviderId_fk" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="FamilyId_fk" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Appointment" nillable="true" type="tns:Appointment" />
+  <xs:complexType name="ArrayOfQualification_Provider">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Qualification_Provider" nillable="true" type="tns:Qualification_Provider" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQualification_Provider" nillable="true" type="tns:ArrayOfQualification_Provider" />
+  <xs:complexType name="Qualification_Provider">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QualificationProviderId" type="xs:int" />
+      <xs:element minOccurs="0" name="HealthCareProviderId_fk" type="xs:int" />
+      <xs:element minOccurs="0" name="QualificationId_fk" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Qualification_Provider" nillable="true" type="tns:Qualification_Provider" />
+  <xs:complexType name="ArrayOfFamily">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Family" nillable="true" type="tns:Family" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFamily" nillable="true" type="tns:ArrayOfFamily" />
+  <xs:complexType name="Family">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FamilyId" type="xs:int" />
+      <xs:element minOccurs="0" name="OtherContact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId_fk" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Family_Patients" nillable="true" type="tns:ArrayOfFamily_Patient">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Appointments" nillable="true" type="tns:ArrayOfAppointment">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Family" nillable="true" type="tns:Family" />
+  <xs:complexType name="ArrayOfFamily_Patient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Family_Patient" nillable="true" type="tns:Family_Patient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFamily_Patient" nillable="true" type="tns:ArrayOfFamily_Patient" />
+  <xs:complexType name="Family_Patient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FamilyId_fk" type="xs:int" />
+      <xs:element minOccurs="0" name="PatientId_fk" type="xs:int" />
+      <xs:element minOccurs="0" name="FamilyPatientId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Family_Patient" nillable="true" type="tns:Family_Patient" />
+  <xs:complexType name="ArrayOfUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="User" nillable="true" type="tns:User" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUser" nillable="true" type="tns:ArrayOfUser" />
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AddressId" type="xs:int" />
+      <xs:element minOccurs="0" name="AddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="State_fk" type="xs:int" />
+      <xs:element minOccurs="0" name="ZipCode" type="xs:int" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Users" nillable="true" type="tns:ArrayOfUser">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Schools" nillable="true" type="tns:ArrayOfSchool">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="ArrayOfSchool">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="School" nillable="true" type="tns:School" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSchool" nillable="true" type="tns:ArrayOfSchool" />
+  <xs:complexType name="School">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SchoolId" type="xs:int" />
+      <xs:element minOccurs="0" name="SchoolName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Contact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressId_fk" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Patients" nillable="true" type="tns:ArrayOfPatient">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="School" nillable="true" type="tns:School" />
+  <xs:complexType name="ArrayOfPatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Patient" nillable="true" type="tns:Patient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPatient" nillable="true" type="tns:ArrayOfPatient" />
+  <xs:complexType name="Patient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PatientId" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EthnicityId_fk" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SchoolId_fk" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Family_Patients" nillable="true" type="tns:ArrayOfFamily_Patient">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Appointments" nillable="true" type="tns:ArrayOfAppointment">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Patient" nillable="true" type="tns:Patient" />
+  <xs:complexType name="ArrayOfAddress">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Address" nillable="true" type="tns:Address" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAddress" nillable="true" type="tns:ArrayOfAddress" />
+  <xs:complexType name="State">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StateId" type="xs:int" />
+      <xs:element minOccurs="0" name="StateCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Addresses" nillable="true" type="tns:ArrayOfAddress">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="State" nillable="true" type="tns:State" />
+  <xs:complexType name="ArrayOfState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="State" nillable="true" type="tns:State" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfState" nillable="true" type="tns:ArrayOfState" />
+  <xs:complexType name="Ethnicity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EthnicityId" type="xs:int" />
+      <xs:element minOccurs="0" name="EthnicityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Patients" nillable="true" type="tns:ArrayOfPatient">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Ethnicity" nillable="true" type="tns:Ethnicity" />
+  <xs:complexType name="ArrayOfEthnicity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Ethnicity" nillable="true" type="tns:Ethnicity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEthnicity" nillable="true" type="tns:ArrayOfEthnicity" />
+  <xs:complexType name="ParentDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FamilyId" type="xs:int" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OtherContact" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLine2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParentDetail" nillable="true" type="tns:ParentDetail" />
+  <xs:complexType name="ArrayOfHealthCareProviderList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="HealthCareProviderList" nillable="true" type="tns:HealthCareProviderList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHealthCareProviderList" nillable="true" type="tns:ArrayOfHealthCareProviderList" />
+  <xs:complexType name="HealthCareProviderList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="First_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Last_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Clinic_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Role_InPractice" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Address_Line" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City_" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="HealthCareProviderList" nillable="true" type="tns:HealthCareProviderList" />
+  <xs:complexType name="ArrayOfAppointmentListPatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AppointmentListPatient" nillable="true" type="tns:AppointmentListPatient" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAppointmentListPatient" nillable="true" type="tns:ArrayOfAppointmentListPatient" />
+  <xs:complexType name="AppointmentListPatient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AppointmentID_" type="xs:int" />
+      <xs:element minOccurs="0" name="pFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Date_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Time_" nillable="true" type="ser:duration" />
+      <xs:element minOccurs="0" name="reason_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PracticeName_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Clinic_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FamilyId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AppointmentListPatient" nillable="true" type="tns:AppointmentListPatient" />
+</xs:schema>

@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DABANGG</Machine>
+    <WindowsUser>sribo</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>3b5ac63b-3207-4b25-9ee1-4ed4a412f2d0</PackageIdentityName>
+    <RegisteredManifestChecksum>C534785B468F784ED33BF9B04F67C4FCCA5FEA803DB28253AB1F86282313373D</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>3b5ac63b-3207-4b25-9ee1-4ed4a412f2d0_1.0.0.0_neutral__e6fzwzbq8zbfg</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>3b5ac63b-3207-4b25-9ee1-4ed4a412f2d0_e6fzwzbq8zbfg!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>3b5ac63b-3207-4b25-9ee1-4ed4a412f2d0</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Tam</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-08-12T13:07:17.305</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\EYE.exe">
+      <PackagePath>EYE.exe</PackagePath>
+      <Modified>2014-08-13T17:17:49.249</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\app_icon.png">
+      <PackagePath>Assets\app_icon.png</PackagePath>
+      <Modified>2014-06-07T06:58:53.093</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\back.png">
+      <PackagePath>Assets\back.png</PackagePath>
+      <Modified>2014-05-18T05:40:21.626</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\cancel.png">
+      <PackagePath>Assets\cancel.png</PackagePath>
+      <Modified>2014-05-18T05:40:21.631</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\child.png">
+      <PackagePath>Assets\child.png</PackagePath>
+      <Modified>2014-06-07T06:58:53.104</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\doc.png">
+      <PackagePath>Assets\doc.png</PackagePath>
+      <Modified>2014-06-07T06:58:53.110</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\edit.png">
+      <PackagePath>Assets\edit.png</PackagePath>
+      <Modified>2014-05-18T05:40:24.296</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\home_icon.png">
+      <PackagePath>Assets\home_icon.png</PackagePath>
+      <Modified>2014-05-30T19:27:21.262</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-14T20:27:45.333</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\mail.png">
+      <PackagePath>Assets\mail.png</PackagePath>
+      <Modified>2014-05-18T05:40:24.307</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\patients_icon.png">
+      <PackagePath>Assets\patients_icon.png</PackagePath>
+      <Modified>2014-05-30T19:27:21.280</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\power.png">
+      <PackagePath>Assets\power.png</PackagePath>
+      <Modified>2014-05-30T19:27:21.287</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\profile.png">
+      <PackagePath>Assets\profile.png</PackagePath>
+      <Modified>2014-06-07T07:05:47.972</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\profileFamily.png">
+      <PackagePath>Assets\profileFamily.png</PackagePath>
+      <Modified>2014-06-07T07:15:02.123</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\refresh.png">
+      <PackagePath>Assets\refresh.png</PackagePath>
+      <Modified>2014-05-18T05:40:24.318</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\results_icon.png">
+      <PackagePath>Assets\results_icon.png</PackagePath>
+      <Modified>2014-05-30T19:27:21.295</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\screening_icon.png">
+      <PackagePath>Assets\screening_icon.png</PackagePath>
+      <Modified>2014-05-30T19:27:21.301</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\search.png">
+      <PackagePath>Assets\search.png</PackagePath>
+      <Modified>2014-05-18T05:40:24.333</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\settings.png">
+      <PackagePath>Assets\settings.png</PackagePath>
+      <Modified>2014-05-18T05:40:24.344</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-14T20:27:45.310</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-14T20:27:45.298</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-14T20:27:45.201</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\Tile.scale-100.png">
+      <PackagePath>Assets\Tile.scale-100.png</PackagePath>
+      <Modified>2014-06-09T03:11:19.918</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-05-14T20:27:45.168</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\female.jpg">
+      <PackagePath>Assets\female.jpg</PackagePath>
+      <Modified>2014-06-10T03:33:55.834</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\myprofile.gif">
+      <PackagePath>Assets\myprofile.gif</PackagePath>
+      <Modified>2014-06-10T03:08:55.490</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+      <Modified>2014-05-21T02:53:13.518</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.740</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\AppointmentDetails.xbf">
+      <PackagePath>AppointmentDetails.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.741</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\BlankPage1.xbf">
+      <PackagePath>BlankPage1.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.744</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\DoctorRegistration.xbf">
+      <PackagePath>DoctorRegistration.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.748</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\Login.xbf">
+      <PackagePath>Login.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.749</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.750</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\ParentHome.xbf">
+      <PackagePath>ParentHome.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.752</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\ParentEditProfile.xbf">
+      <PackagePath>ParentEditProfile.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.756</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\PatientData.xbf">
+      <PackagePath>PatientData.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.757</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\PatientHome.xbf">
+      <PackagePath>PatientHome.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.757</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\PatientList.xbf">
+      <PackagePath>PatientList.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.759</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\PatientRegistration.xbf">
+      <PackagePath>PatientRegistration.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.762</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\ParentRegistration.xbf">
+      <PackagePath>ParentRegistration.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.764</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\RequestAppointment.xbf">
+      <PackagePath>RequestAppointment.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.765</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\SearchDoctor.xbf">
+      <PackagePath>SearchDoctor.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.767</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\Teacher.xbf">
+      <PackagePath>Teacher.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.768</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\TeacherRegistration.xbf">
+      <PackagePath>TeacherRegistration.xbf</PackagePath>
+      <Modified>2014-06-11T20:28:52.770</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\ViewAppointment.xbf">
+      <PackagePath>ViewAppointment.xbf</PackagePath>
+      <Modified>2014-08-12T19:35:36.760</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-08-12T13:07:17.124</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

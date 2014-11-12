@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EYE" Class="EYEDataClassesDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=qa8rsn1hmg.database.windows.net;Initial Catalog=EYE;Persist Security Info=True;User ID=tuantran" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="EYEConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Address" Member="Addresses">
+    <Type Name="Address">
+      <Column Name="AddressId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AddressLine1" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressLine2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="State_fk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ZipCode" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Address_User" Member="Users" ThisKey="AddressId" OtherKey="AddressId_fk" Type="User" />
+      <Association Name="Address_School" Member="Schools" ThisKey="AddressId" OtherKey="AddressId_fk" Type="School" />
+      <Association Name="State_Address" Member="State" ThisKey="State_fk" OtherKey="StateId" Type="State" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.State" Member="States">
+    <Type Name="State">
+      <Column Name="StateId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StateCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StateName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="State_Address" Member="Addresses" ThisKey="StateId" OtherKey="State_fk" Type="Address" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Role" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddressId_fk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="User_HealthCareProvider" Member="HealthCareProviders" ThisKey="UserId" OtherKey="UserId_fk" Type="HealthCareProvider" />
+      <Association Name="User_Family" Member="Families" ThisKey="UserId" OtherKey="UserId_fk" Type="Family" />
+      <Association Name="Address_User" Member="Address" ThisKey="AddressId_fk" OtherKey="AddressId" Type="Address" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HealthCareProvider" Member="HealthCareProviders">
+    <Type Name="HealthCareProvider">
+      <Column Name="HealthCareProviderId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PracticeName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleInPractice" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ClinicName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserId_fk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="User_HealthCareProvider" Member="User" ThisKey="UserId_fk" OtherKey="UserId" Type="User" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ethnicity" Member="Ethnicities">
+    <Type Name="Ethnicity">
+      <Column Name="EthnicityId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EthnicityName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Ethnicity_Patient" Member="Patients" ThisKey="EthnicityId" OtherKey="EthnicityId_fk" Type="Patient" />
+    </Type>
+  </Table>
+  <Table Name="dbo.School" Member="Schools">
+    <Type Name="School">
+      <Column Name="SchoolId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SchoolName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contact" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressId_fk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="School_Patient" Member="Patients" ThisKey="SchoolId" OtherKey="SchoolId_fk" Type="Patient" />
+      <Association Name="Address_School" Member="Address" ThisKey="AddressId_fk" OtherKey="AddressId" Type="Address" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Family" Member="Families">
+    <Type Name="Family">
+      <Column Name="FamilyId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OtherContact" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserId_fk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Family_Family_Patient" Member="Family_Patients" ThisKey="FamilyId" OtherKey="FamilyId_fk" Type="Family_Patient" />
+      <Association Name="User_Family" Member="User" ThisKey="UserId_fk" OtherKey="UserId" Type="User" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Family_Patient" Member="Family_Patients">
+    <Type Name="Family_Patient">
+      <Column Name="FamilyId_fk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PatientId_fk" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FamilyPatientId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Association Name="Family_Family_Patient" Member="Family" ThisKey="FamilyId_fk" OtherKey="FamilyId" Type="Family" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Patient_Family_Patient" Member="Patient" ThisKey="PatientId_fk" OtherKey="PatientId" Type="Patient" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HealthCareProviderList" Member="HealthCareProviderLists">
+    <Type Name="HealthCareProviderList">
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ClinicName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RoleInPractice" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressLine1" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressLine2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Patient" Member="Patients">
+    <Type Name="Patient">
+      <Column Name="PatientId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EthnicityId_fk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SchoolId_fk" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Patient_Family_Patient" Member="Family_Patients" ThisKey="PatientId" OtherKey="PatientId_fk" Type="Family_Patient" />
+      <Association Name="Ethnicity_Patient" Member="Ethnicity" ThisKey="EthnicityId_fk" OtherKey="EthnicityId" Type="Ethnicity" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="School_Patient" Member="School" ThisKey="SchoolId_fk" OtherKey="SchoolId" Type="School" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ParentDetails" Member="ParentDetails">
+    <Type Name="ParentDetail">
+      <Column Name="FamilyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="OtherContact" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AddressLine1" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressLine2" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.StateCode" Method="StateCode">
+    <Parameter Name="statecode" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <ElementType Name="StateCodeResult">
+      <Column Name="StateCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Ethnicity" Method="sp_Ethnicity">
+    <Parameter Name="Ethnicity" Parameter="ethnicity" Type="System.String" DbType="NVarChar(50)" Direction="InOut" />
+    <ElementType Name="sp_EthnicityResult">
+      <Column Name="EthnicityName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_s1" Method="sp_s1">
+    <Parameter Name="statecode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="stateid" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="sp_s1Result">
+      <Column Name="StateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_s2" Method="sp_s2">
+    <Parameter Name="statecode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="stateid" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <ElementType Name="sp_s2Result">
+      <Column Name="StateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

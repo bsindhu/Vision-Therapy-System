@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DABANGG</Machine>
+    <WindowsUser>sribo</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>3b5ac63b-3207-4b25-9ee1-4ed4a412f2d0</PackageIdentityName>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\EYE.exe">
+      <PackagePath>EYE.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\app_icon.png">
+      <PackagePath>Assets\app_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\back.png">
+      <PackagePath>Assets\back.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\cancel.png">
+      <PackagePath>Assets\cancel.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\child.png">
+      <PackagePath>Assets\child.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\doc.png">
+      <PackagePath>Assets\doc.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\edit.png">
+      <PackagePath>Assets\edit.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\home_icon.png">
+      <PackagePath>Assets\home_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\mail.png">
+      <PackagePath>Assets\mail.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\patients_icon.png">
+      <PackagePath>Assets\patients_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\power.png">
+      <PackagePath>Assets\power.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\profile.png">
+      <PackagePath>Assets\profile.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\profileFamily.png">
+      <PackagePath>Assets\profileFamily.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\refresh.png">
+      <PackagePath>Assets\refresh.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\results_icon.png">
+      <PackagePath>Assets\results_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\screening_icon.png">
+      <PackagePath>Assets\screening_icon.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\search.png">
+      <PackagePath>Assets\search.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\settings.png">
+      <PackagePath>Assets\settings.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\Tile.scale-100.png">
+      <PackagePath>Assets\Tile.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\female.jpg">
+      <PackagePath>Assets\female.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Assets\myprofile.gif">
+      <PackagePath>Assets\myprofile.gif</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\AppointmentDetails.xbf">
+      <PackagePath>AppointmentDetails.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\BlankPage1.xbf">
+      <PackagePath>BlankPage1.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\DoctorRegistration.xbf">
+      <PackagePath>DoctorRegistration.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\Login.xbf">
+      <PackagePath>Login.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\ParentHome.xbf">
+      <PackagePath>ParentHome.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\ParentEditProfile.xbf">
+      <PackagePath>ParentEditProfile.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\PatientData.xbf">
+      <PackagePath>PatientData.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\PatientHome.xbf">
+      <PackagePath>PatientHome.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\PatientList.xbf">
+      <PackagePath>PatientList.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\PatientRegistration.xbf">
+      <PackagePath>PatientRegistration.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\ParentRegistration.xbf">
+      <PackagePath>ParentRegistration.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\RequestAppointment.xbf">
+      <PackagePath>RequestAppointment.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\SearchDoctor.xbf">
+      <PackagePath>SearchDoctor.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\Teacher.xbf">
+      <PackagePath>Teacher.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\TeacherRegistration.xbf">
+      <PackagePath>TeacherRegistration.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\ViewAppointment.xbf">
+      <PackagePath>ViewAppointment.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\sribo\Desktop\sindhu documents\EYE Project\Project Version\Version3\EYE\EYE\EYE\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

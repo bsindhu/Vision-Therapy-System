@@ -1,0 +1,8 @@
+C:\Users\Tuan\Desktop\CSS596\FinalProject\EYECloudService\EYECloudService\bin\Debug\ServiceConfiguration.cscfg
+C:\Users\Tuan\Desktop\CSS596\FinalProject\EYECloudService\EYECloudService\bin\Debug\ServiceDefinition.csdef
+C:\Users\sribo\Downloads\EYECloudService\EYECloudService\EYECloudService\bin\Debug\ServiceConfiguration.cscfg
+C:\Users\sribo\Downloads\EYECloudService\EYECloudService\EYECloudService\bin\Debug\ServiceDefinition.csdef
+C:\Users\sribo\Desktop\EYECloudService\EYECloudService\EYECloudService\bin\Debug\ServiceConfiguration.cscfg
+C:\Users\sribo\Desktop\EYECloudService\EYECloudService\EYECloudService\bin\Debug\ServiceDefinition.csdef
+C:\Users\sribo\Desktop\sindhu documents\Project Version\Version2\EYECloudService\EYECloudService\EYECloudService\bin\Debug\ServiceConfiguration.cscfg
+C:\Users\sribo\Desktop\sindhu documents\Project Version\Version2\EYECloudService\EYECloudService\EYECloudService\bin\Debug\ServiceDefinition.csdef

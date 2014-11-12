@@ -1,0 +1,4 @@
+C:\Users\sribo\Desktop\sindhu documents\Project Version\Version3\EYE\EYE\CodedUITestProject2\bin\Debug\CodedUITestProject2.dll
+C:\Users\sribo\Desktop\sindhu documents\Project Version\Version3\EYE\EYE\CodedUITestProject2\bin\Debug\CodedUITestProject2.pdb
+C:\Users\sribo\Desktop\sindhu documents\Project Version\Version3\EYE\EYE\CodedUITestProject2\obj\Debug\CodedUITestProject2.dll
+C:\Users\sribo\Desktop\sindhu documents\Project Version\Version3\EYE\EYE\CodedUITestProject2\obj\Debug\CodedUITestProject2.pdb

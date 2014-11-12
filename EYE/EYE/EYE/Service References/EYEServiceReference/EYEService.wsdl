@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EYEService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:52635/EYEService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:52635/EYEService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:52635/EYEService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/EYEServiceWebRole" />
+      <xsd:import schemaLocation="http://localhost:52635/EYEService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEYEService_validateUserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:validateUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_validateUserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validateUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getUserRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserRole" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getUserRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserId" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_validateUserEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:validateUserEmail" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_validateUserEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:validateUserEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewUser" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyUser" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUsers" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewAddress" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAddress" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyAddress" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getAddresses_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAddresses" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getAddresses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAddressesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getAddressId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAddressId" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getAddressId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAddressIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewState_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewState" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteState_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteState" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyState_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyState" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getStates_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStates" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getStates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewHealthCareProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewHealthCareProvider" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewHealthCareProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewHealthCareProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteHealthCareProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteHealthCareProvider" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteHealthCareProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteHealthCareProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyHealthCareProvider_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyHealthCareProvider" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyHealthCareProvider_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyHealthCareProviderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getHealthCareProviders_InputMessage">
+    <wsdl:part name="parameters" element="tns:getHealthCareProviders" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getHealthCareProviders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getHealthCareProvidersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewFamily_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewFamily" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewFamily_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewFamilyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteFamily_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteFamily" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteFamily_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteFamilyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyFamily_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyFamily" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyFamily_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyFamilyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getFamilies_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFamilies" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getFamilies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFamiliesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewPatient" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deletePatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletePatient" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deletePatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletePatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyPatient" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewFamily_Patient_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewFamily_Patient" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewFamily_Patient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewFamily_PatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteFamily_Patient_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteFamily_Patient" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteFamily_Patient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteFamily_PatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyFamily_Patient_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyFamily_Patient" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyFamily_Patient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyFamily_PatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getFamily_Patients_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFamily_Patients" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getFamily_Patients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFamily_PatientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewSchool_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewSchool" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewSchool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewSchoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteSchool_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteSchool" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteSchool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteSchoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifySchool_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifySchool" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifySchool_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifySchoolResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getSchools_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSchools" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getSchools_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSchoolsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewEthnicity_InputMessage">
+    <wsdl:part name="parameters" element="tns:addNewEthnicity" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addNewEthnicity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addNewEthnicityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteEthnicity_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteEthnicity" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteEthnicity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteEthnicityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyEthnicity_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifyEthnicity" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_modifyEthnicity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifyEthnicityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getEthnicities_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEthnicities" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getEthnicities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEthnicitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getEthnicityNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEthnicityNames" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getEthnicityNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEthnicityNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getPatientId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPatientId" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getPatientId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPatientIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_isSchoolExisted_InputMessage">
+    <wsdl:part name="parameters" element="tns:isSchoolExisted" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_isSchoolExisted_OutputMessage">
+    <wsdl:part name="parameters" element="tns:isSchoolExistedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getHealthCareProviderId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getHealthCareProviderId" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getHealthCareProviderId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getHealthCareProviderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getFamily_PatientId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFamily_PatientId" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getFamily_PatientId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFamily_PatientIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getEthnicityId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEthnicityId" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getEthnicityId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEthnicityIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_abbcd_InputMessage">
+    <wsdl:part name="parameters" element="tns:abbcd" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_abbcd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:abbcdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getUserdetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getUserdetails" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getUserdetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getUserdetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getPatientList_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPatientList" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getPatientList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPatientListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getFamilyDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFamilyDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getFamilyDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFamilyDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_createAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:createAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_createAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createAppointmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getProviderSearchListDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getProviderSearchListDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getProviderSearchListDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getProviderSearchListDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addPatient_InputMessage">
+    <wsdl:part name="parameters" element="tns:addPatient" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addPatient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addPatientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:addAddress" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_addAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getStateId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStateId" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getStateId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStateIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getStateCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:getStateCode" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getStateCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getStateCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getSchoolId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSchoolId" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getSchoolId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSchoolIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getPatients_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPatients" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getPatients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPatientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_healthCareProviderId_InputMessage">
+    <wsdl:part name="parameters" element="tns:healthCareProviderId" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_healthCareProviderId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:healthCareProviderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_patientId_InputMessage">
+    <wsdl:part name="parameters" element="tns:patientId" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_patientId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:patientIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_patientFullName_InputMessage">
+    <wsdl:part name="parameters" element="tns:patientFullName" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_patientFullName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:patientFullNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_appointments_InputMessage">
+    <wsdl:part name="parameters" element="tns:appointments" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_appointments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:appointmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getFamilyId_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFamilyId" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_getFamilyId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFamilyIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_updateAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:updateAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_updateAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updateAppointmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteAppointment_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAppointment" />
+  </wsdl:message>
+  <wsdl:message name="IEYEService_deleteAppointment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleteAppointmentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEYEService">
+    <wsdl:operation name="validateUserLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/validateUserLogin" message="tns:IEYEService_validateUserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/validateUserLoginResponse" message="tns:IEYEService_validateUserLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserRole">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getUserRole" message="tns:IEYEService_getUserRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getUserRoleResponse" message="tns:IEYEService_getUserRole_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getUserId" message="tns:IEYEService_getUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getUserIdResponse" message="tns:IEYEService_getUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="validateUserEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/validateUserEmail" message="tns:IEYEService_validateUserEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/validateUserEmailResponse" message="tns:IEYEService_validateUserEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/addNewUser" message="tns:IEYEService_addNewUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/addNewUserResponse" message="tns:IEYEService_addNewUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/deleteUser" message="tns:IEYEService_deleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/deleteUserResponse" message="tns:IEYEService_deleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/modifyUser" message="tns:IEYEService_modifyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/modifyUserResponse" message="tns:IEYEService_modifyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getUsers" message="tns:IEYEService_getUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getUsersResponse" message="tns:IEYEService_getUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/addNewAddress" message="tns:IEYEService_addNewAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/addNewAddressResponse" message="tns:IEYEService_addNewAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/deleteAddress" message="tns:IEYEService_deleteAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/deleteAddressResponse" message="tns:IEYEService_deleteAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/modifyAddress" message="tns:IEYEService_modifyAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/modifyAddressResponse" message="tns:IEYEService_modifyAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddresses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getAddresses" message="tns:IEYEService_getAddresses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getAddressesResponse" message="tns:IEYEService_getAddresses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAddressId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getAddressId" message="tns:IEYEService_getAddressId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getAddressIdResponse" message="tns:IEYEService_getAddressId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/addNewState" message="tns:IEYEService_addNewState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/addNewStateResponse" message="tns:IEYEService_addNewState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/deleteState" message="tns:IEYEService_deleteState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/deleteStateResponse" message="tns:IEYEService_deleteState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/modifyState" message="tns:IEYEService_modifyState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/modifyStateResponse" message="tns:IEYEService_modifyState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStates">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getStates" message="tns:IEYEService_getStates_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getStatesResponse" message="tns:IEYEService_getStates_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewHealthCareProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/addNewHealthCareProvider" message="tns:IEYEService_addNewHealthCareProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/addNewHealthCareProviderResponse" message="tns:IEYEService_addNewHealthCareProvider_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteHealthCareProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/deleteHealthCareProvider" message="tns:IEYEService_deleteHealthCareProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/deleteHealthCareProviderResponse" message="tns:IEYEService_deleteHealthCareProvider_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyHealthCareProvider">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/modifyHealthCareProvider" message="tns:IEYEService_modifyHealthCareProvider_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/modifyHealthCareProviderResponse" message="tns:IEYEService_modifyHealthCareProvider_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getHealthCareProviders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getHealthCareProviders" message="tns:IEYEService_getHealthCareProviders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getHealthCareProvidersResponse" message="tns:IEYEService_getHealthCareProviders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewFamily">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/addNewFamily" message="tns:IEYEService_addNewFamily_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/addNewFamilyResponse" message="tns:IEYEService_addNewFamily_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteFamily">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/deleteFamily" message="tns:IEYEService_deleteFamily_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/deleteFamilyResponse" message="tns:IEYEService_deleteFamily_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyFamily">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/modifyFamily" message="tns:IEYEService_modifyFamily_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/modifyFamilyResponse" message="tns:IEYEService_modifyFamily_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFamilies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getFamilies" message="tns:IEYEService_getFamilies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getFamiliesResponse" message="tns:IEYEService_getFamilies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/addNewPatient" message="tns:IEYEService_addNewPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/addNewPatientResponse" message="tns:IEYEService_addNewPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletePatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/deletePatient" message="tns:IEYEService_deletePatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/deletePatientResponse" message="tns:IEYEService_deletePatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/modifyPatient" message="tns:IEYEService_modifyPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/modifyPatientResponse" message="tns:IEYEService_modifyPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewFamily_Patient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/addNewFamily_Patient" message="tns:IEYEService_addNewFamily_Patient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/addNewFamily_PatientResponse" message="tns:IEYEService_addNewFamily_Patient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteFamily_Patient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/deleteFamily_Patient" message="tns:IEYEService_deleteFamily_Patient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/deleteFamily_PatientResponse" message="tns:IEYEService_deleteFamily_Patient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyFamily_Patient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/modifyFamily_Patient" message="tns:IEYEService_modifyFamily_Patient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/modifyFamily_PatientResponse" message="tns:IEYEService_modifyFamily_Patient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFamily_Patients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getFamily_Patients" message="tns:IEYEService_getFamily_Patients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getFamily_PatientsResponse" message="tns:IEYEService_getFamily_Patients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewSchool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/addNewSchool" message="tns:IEYEService_addNewSchool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/addNewSchoolResponse" message="tns:IEYEService_addNewSchool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteSchool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/deleteSchool" message="tns:IEYEService_deleteSchool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/deleteSchoolResponse" message="tns:IEYEService_deleteSchool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifySchool">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/modifySchool" message="tns:IEYEService_modifySchool_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/modifySchoolResponse" message="tns:IEYEService_modifySchool_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSchools">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getSchools" message="tns:IEYEService_getSchools_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getSchoolsResponse" message="tns:IEYEService_getSchools_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addNewEthnicity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/addNewEthnicity" message="tns:IEYEService_addNewEthnicity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/addNewEthnicityResponse" message="tns:IEYEService_addNewEthnicity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteEthnicity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/deleteEthnicity" message="tns:IEYEService_deleteEthnicity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/deleteEthnicityResponse" message="tns:IEYEService_deleteEthnicity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyEthnicity">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/modifyEthnicity" message="tns:IEYEService_modifyEthnicity_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/modifyEthnicityResponse" message="tns:IEYEService_modifyEthnicity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEthnicities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getEthnicities" message="tns:IEYEService_getEthnicities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getEthnicitiesResponse" message="tns:IEYEService_getEthnicities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEthnicityNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getEthnicityNames" message="tns:IEYEService_getEthnicityNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getEthnicityNamesResponse" message="tns:IEYEService_getEthnicityNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPatientId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getPatientId" message="tns:IEYEService_getPatientId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getPatientIdResponse" message="tns:IEYEService_getPatientId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="isSchoolExisted">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/isSchoolExisted" message="tns:IEYEService_isSchoolExisted_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/isSchoolExistedResponse" message="tns:IEYEService_isSchoolExisted_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getHealthCareProviderId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getHealthCareProviderId" message="tns:IEYEService_getHealthCareProviderId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getHealthCareProviderIdResponse" message="tns:IEYEService_getHealthCareProviderId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFamily_PatientId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getFamily_PatientId" message="tns:IEYEService_getFamily_PatientId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getFamily_PatientIdResponse" message="tns:IEYEService_getFamily_PatientId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEthnicityId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getEthnicityId" message="tns:IEYEService_getEthnicityId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getEthnicityIdResponse" message="tns:IEYEService_getEthnicityId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="abbcd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/abbcd" message="tns:IEYEService_abbcd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/abbcdResponse" message="tns:IEYEService_abbcd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getUserdetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getUserdetails" message="tns:IEYEService_getUserdetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getUserdetailsResponse" message="tns:IEYEService_getUserdetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPatientList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getPatientList" message="tns:IEYEService_getPatientList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getPatientListResponse" message="tns:IEYEService_getPatientList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFamilyDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getFamilyDetails" message="tns:IEYEService_getFamilyDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getFamilyDetailsResponse" message="tns:IEYEService_getFamilyDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="createAppointment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/createAppointment" message="tns:IEYEService_createAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/createAppointmentResponse" message="tns:IEYEService_createAppointment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getProviderSearchListDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getProviderSearchListDetails" message="tns:IEYEService_getProviderSearchListDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getProviderSearchListDetailsResponse" message="tns:IEYEService_getProviderSearchListDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addPatient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/addPatient" message="tns:IEYEService_addPatient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/addPatientResponse" message="tns:IEYEService_addPatient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/addAddress" message="tns:IEYEService_addAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/addAddressResponse" message="tns:IEYEService_addAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStateId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getStateId" message="tns:IEYEService_getStateId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getStateIdResponse" message="tns:IEYEService_getStateId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getStateCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getStateCode" message="tns:IEYEService_getStateCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getStateCodeResponse" message="tns:IEYEService_getStateCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSchoolId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getSchoolId" message="tns:IEYEService_getSchoolId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getSchoolIdResponse" message="tns:IEYEService_getSchoolId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPatients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getPatients" message="tns:IEYEService_getPatients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getPatientsResponse" message="tns:IEYEService_getPatients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="healthCareProviderId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/healthCareProviderId" message="tns:IEYEService_healthCareProviderId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/healthCareProviderIdResponse" message="tns:IEYEService_healthCareProviderId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="patientId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/patientId" message="tns:IEYEService_patientId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/patientIdResponse" message="tns:IEYEService_patientId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="patientFullName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/patientFullName" message="tns:IEYEService_patientFullName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/patientFullNameResponse" message="tns:IEYEService_patientFullName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="appointments">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/appointments" message="tns:IEYEService_appointments_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/appointmentsResponse" message="tns:IEYEService_appointments_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFamilyId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/getFamilyId" message="tns:IEYEService_getFamilyId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/getFamilyIdResponse" message="tns:IEYEService_getFamilyId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updateAppointment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/updateAppointment" message="tns:IEYEService_updateAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/updateAppointmentResponse" message="tns:IEYEService_updateAppointment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteAppointment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEYEService/deleteAppointment" message="tns:IEYEService_deleteAppointment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEYEService/deleteAppointmentResponse" message="tns:IEYEService_deleteAppointment_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEYEService" type="tns:IEYEService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validateUserLogin">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/validateUserLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserRole">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getUserRole" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserId">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateUserEmail">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/validateUserEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewUser">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/addNewUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUser">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/deleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUser">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/modifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUsers">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewAddress">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/addNewAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAddress">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/deleteAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyAddress">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/modifyAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddresses">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getAddresses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAddressId">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getAddressId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewState">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/addNewState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteState">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/deleteState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyState">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/modifyState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStates">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getStates" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewHealthCareProvider">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/addNewHealthCareProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteHealthCareProvider">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/deleteHealthCareProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyHealthCareProvider">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/modifyHealthCareProvider" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHealthCareProviders">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getHealthCareProviders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewFamily">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/addNewFamily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFamily">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/deleteFamily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyFamily">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/modifyFamily" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFamilies">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getFamilies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewPatient">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/addNewPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deletePatient">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/deletePatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyPatient">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/modifyPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewFamily_Patient">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/addNewFamily_Patient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteFamily_Patient">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/deleteFamily_Patient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyFamily_Patient">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/modifyFamily_Patient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFamily_Patients">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getFamily_Patients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewSchool">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/addNewSchool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteSchool">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/deleteSchool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifySchool">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/modifySchool" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSchools">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getSchools" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addNewEthnicity">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/addNewEthnicity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteEthnicity">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/deleteEthnicity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyEthnicity">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/modifyEthnicity" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEthnicities">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getEthnicities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEthnicityNames">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getEthnicityNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatientId">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getPatientId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isSchoolExisted">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/isSchoolExisted" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHealthCareProviderId">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getHealthCareProviderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFamily_PatientId">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getFamily_PatientId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEthnicityId">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getEthnicityId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="abbcd">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/abbcd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUserdetails">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getUserdetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatientList">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getPatientList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFamilyDetails">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getFamilyDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAppointment">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/createAppointment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProviderSearchListDetails">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getProviderSearchListDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addPatient">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/addPatient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addAddress">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/addAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStateId">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getStateId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStateCode">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getStateCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSchoolId">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getSchoolId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPatients">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getPatients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="healthCareProviderId">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/healthCareProviderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="patientId">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/patientId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="patientFullName">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/patientFullName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="appointments">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/appointments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFamilyId">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/getFamilyId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateAppointment">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/updateAppointment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteAppointment">
+      <soap:operation soapAction="http://tempuri.org/IEYEService/deleteAppointment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EYEService">
+    <wsdl:port name="BasicHttpBinding_IEYEService" binding="tns:BasicHttpBinding_IEYEService">
+      <soap:address location="http://localhost:52635/EYEService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
