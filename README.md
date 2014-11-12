@@ -13,3 +13,31 @@ EYE is a software application designed to detect and aid in the treatment of bin
 3. Therapy games to aid in the treatment of vision issues.
 4. Parental portal to track the treatment of vision issues for their children. 
 The application is also designed to be a Knowledge management system to aid in the research of vision issues by the larger medical community. 
+
+
+Project Goals
+The goals of the project are:
+Goal 1: Functionality –Develop a suite that has both screening tools and vision therapy games for children.
+Goal 2: Accessibility –Develop the application to be compatible both on windows tablet and personal computers. This would be extended in future to be on windows phone and on other operating systems. 
+Goal 3: Data-driven –Support data driven development system which provides:
+A knowledge management system for sharing data on medical records between eye care provider and parents/patients.
+Data for researchers in the fields of:
+            1.  Literacy
+            2.  Vision screening and therapy
+            3.  Vision development
+Goal 4: Good coding practices for:
+            1.  Extensibility – Code re-usability for easier future enhancements.
+            2.  Maintainability – Less administration effort in the maintenance of the application.
+            
+
+
+My Role in this project is:
+          Database and application portal development.
+          My responsibilities include:
+Gather requirements for designing the database system.
+Document the requirements for the application.
+Create conceptual model for the database.
+Develop database.
+Test database design for performance.
+Develop application portal for one of the user role.
+
