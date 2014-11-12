@@ -1,4 +1,4 @@
-Vision-Therapy-System
+Educating Young Eyes(Vision-Therapy-System)
 =====================
 Introduction
 Binocular vision is the ability to use both eyes to capture images in visual space and the ability of the brain to compare and fuse the images from the two eyes into one clear image. When the brain’s visual processing isn’t optimal, it is unable to produce a clear image, and the individual is said to have binocular vision dysfunctions or binocular vision problems.
